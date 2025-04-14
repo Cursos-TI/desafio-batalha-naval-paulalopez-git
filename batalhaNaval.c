@@ -54,7 +54,7 @@ int main() {
         printf("Erro: Navio vertical fora dos limites do tabuleiro!\n");
     }
 
-    // Exibir coordenadas dos navios
+    //8. Exibir coordenadas dos navios
     printf("\nCoordenadas do Navio Horizontal:\n");
     for (int i = 0; i < TAMANHO_NAVIO; i++) {
         printf("(%d, %d)\n", linha_navio_horizontal, coluna_navio_horizontal + i);
@@ -65,6 +65,16 @@ int main() {
         printf("(%d, %d)\n", linha_navio_vertical + i, coluna_navio_vertical);
     }
 
+    // 9. Exibe o tabuleiro completo
+    printf("\nTabuleiro Batalha Naval (0 = água, 3 = navio):\n\n");
+    for (int linha = 0; linha < TAMANHO_TABULEIRO; linha++) {
+        for (int coluna = 0; coluna < TAMANHO_TABULEIRO; coluna++) {
+            printf("%d ", tabuleiro[linha][coluna]);
+        }
+        printf("\n");
+    }
+
+    return 0;
 
 
 
