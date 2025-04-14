@@ -31,6 +31,17 @@ int main() {
         printf("Erro: Navio horizontal fora dos limites do tabuleiro!\n");
     }
 
+    // 5. Verifica se o navio vertical cabe no tabuleiro
+    if (linha_navio_vertical + TAMANHO_NAVIO <= TAMANHO_TABULEIRO) {
+        // 6. Verifica se há sobreposição com o navio horizontal
+        int pode_posicionar = 1;
+        for (int i = 0; i < TAMANHO_NAVIO; i++) {
+            if (tabuleiro[linha_navio_vertical + i][coluna_navio_vertical] == 3) {
+                pode_posicionar = 0;
+                break;
+            }
+        }
+
 
 
 
