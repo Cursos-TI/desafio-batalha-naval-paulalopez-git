@@ -14,6 +14,12 @@ int main() {
             tabuleiro[linha][coluna] = 0;
         }
     }
+    // 2. Define coordenadas iniciais dos navios (fixas no código)
+    int linha_navio_horizontal = 2;
+    int coluna_navio_horizontal = 4;
+
+    int linha_navio_vertical = 5;
+    int coluna_navio_vertical = 7;
 
 
 
