@@ -42,8 +42,28 @@ int main() {
             }
         }
 
+        // 7. Se não há sobreposição, posiciona o navio vertical
+        if (pode_posicionar) {
+            for (int i = 0; i < TAMANHO_NAVIO; i++) {
+                tabuleiro[linha_navio_vertical + i][coluna_navio_vertical] = 3;
+            }
+        } else {
+            printf("Erro: Sobreposição detectada no navio vertical!\n");
+        }
+    } else {
+        printf("Erro: Navio vertical fora dos limites do tabuleiro!\n");
+    }
 
+    // Exibir coordenadas dos navios
+    printf("\nCoordenadas do Navio Horizontal:\n");
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        printf("(%d, %d)\n", linha_navio_horizontal, coluna_navio_horizontal + i);
+    }
 
+    printf("\nCoordenadas do Navio Vertical:\n");
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        printf("(%d, %d)\n", linha_navio_vertical + i, coluna_navio_vertical);
+    }
 
 
 
