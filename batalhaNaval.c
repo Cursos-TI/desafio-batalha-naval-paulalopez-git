@@ -21,6 +21,17 @@ int main() {
     int linha_navio_vertical = 5;
     int coluna_navio_vertical = 7;
 
+    // 3. Verifica se o navio horizontal cabe no tabuleiro
+    if (coluna_navio_horizontal + TAMANHO_NAVIO <= TAMANHO_TABULEIRO) {
+        // 4. Posiciona o navio horizontal (linha fixa, coluna avança)
+        for (int i = 0; i < TAMANHO_NAVIO; i++) {
+            tabuleiro[linha_navio_horizontal][coluna_navio_horizontal + i] = 3;
+        }
+    } else {
+        printf("Erro: Navio horizontal fora dos limites do tabuleiro!\n");
+    }
+
+
 
 
 
